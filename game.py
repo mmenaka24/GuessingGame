@@ -1,16 +1,16 @@
 import random
 
 
-def get_positive_int(input_str):
+def get_positive_int(prompt):
     while True:
         try:
-            possible_int = int(input(input_str))
-            if possible_int < 1:
+            num = int(input(prompt))
+            if num < 1:
                 raise ValueError
         except ValueError:
             pass
         else:
-            return possible_int
+            return num
 
 
 def main():
